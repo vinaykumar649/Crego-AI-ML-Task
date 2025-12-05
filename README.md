@@ -256,30 +256,30 @@ This executes tests for all three hiring manager examples and validates:
 ## Evaluation Criteria Coverage
 
 ### 1. Correct JSON Logic & Key Usage (35 pts)
-✅ Valid JSON Logic syntax with proper operators (and, or, >, >=, <, <=, ==, !=, in)
-✅ All rules use only allowed keys from the 37 financial domain keys
-✅ Variables properly formatted as `{"var": "key_name"}`
-✅ Comprehensive validator ensures compliance (see `src/core/validator.py`)
+ Valid JSON Logic syntax with proper operators (and, or, >, >=, <, <=, ==, !=, in)
+ All rules use only allowed keys from the 37 financial domain keys
+ Variables properly formatted as `{"var": "key_name"}`
+ Comprehensive validator ensures compliance (see `src/core/validator.py`)
 
 ### 2. Explanations (15 pts)
-✅ Clear, accurate, business-focused explanations
-✅ 1-3 sentences per rule as per LLM system prompt
-✅ Explains conditions and logic flow in plain English
-✅ Domain-specific terminology used appropriately
+ Clear, accurate, business-focused explanations
+ 1-3 sentences per rule as per LLM system prompt
+ Explains conditions and logic flow in plain English
+ Domain-specific terminology used appropriately
 
 ### 3. Embeddings & Key Mapping (30 pts)
-✅ Sentence-transformers embeddings with cosine similarity
-✅ Smart phrase extraction from user prompts
-✅ Similarity scoring with configurable threshold (default 0.20)
-✅ `key_mappings` output includes user_phrase, mapped_to, similarity
-✅ Confidence score computed from average mapping similarities
+ Sentence-transformers embeddings with cosine similarity
+Smart phrase extraction from user prompts
+ Similarity scoring with configurable threshold (default 0.20)
+ `key_mappings` output includes user_phrase, mapped_to, similarity
+ Confidence score computed from average mapping similarities
 
 ### 4. Code Quality & Structure (20 pts)
-✅ Clean separation of concerns across 7 core modules
-✅ Type hints throughout codebase
-✅ Comprehensive error handling and logging
-✅ Production-ready FastAPI implementation
-✅ 43 passing tests validating all functionality
+ Clean separation of concerns across 7 core modules
+ Type hints throughout codebase
+ Comprehensive error handling and logging
+ Production-ready FastAPI implementation
+ 43 passing tests validating all functionality
 
 ## Configuration
 
