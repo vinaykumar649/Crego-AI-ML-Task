@@ -46,7 +46,7 @@ python -m uvicorn src.main:app --host 0.0.0.0 --port 8000
 
 Once the server is running, you can access:
 
-### **Swagger UI (Interactive API Explorer)** 🎯
+### **Swagger UI (Interactive API Explorer)** 
 ```
 http://localhost:8000/docs
 ```
