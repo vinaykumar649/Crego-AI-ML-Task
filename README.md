@@ -42,7 +42,44 @@ SIMILARITY_THRESHOLD=0.20
 python -m uvicorn src.main:app --host 0.0.0.0 --port 8000
 ```
 
+## Access the UI
+
+Once the server is running, you can access:
+
+### **Swagger UI (Interactive API Explorer)** 🎯
+```
+http://localhost:8000/docs
+```
+- Test all endpoints interactively
+- See request/response schemas
+- Try the `/generate-rule` endpoint directly
+
+### **ReDoc (API Documentation)**
+```
+http://localhost:8000/redoc
+```
+- Beautiful, readable API documentation
+- OpenAPI specification viewer
+
+### **OpenAPI Schema (JSON)**
+```
+http://localhost:8000/openapi.json
+```
+- Raw OpenAPI specification
+
+---
+
 ## API Usage
+
+### Testing in Swagger UI
+
+1. Go to **http://localhost:8000/docs**
+2. Find the **POST /generate-rule** endpoint
+3. Click "Try it out"
+4. Paste one of the example prompts below
+5. Click "Execute" to see the response
+
+---
 
 ### Health Check
 
@@ -50,13 +87,28 @@ python -m uvicorn src.main:app --host 0.0.0.0 --port 8000
 curl http://localhost:8000/health
 ```
 
+Response: `{"status": "ok"}`
+
 ### Get Available Keys
 
 ```bash
 curl http://localhost:8000/keys
 ```
 
-Returns list of 37 available financial keys in the system.
+Returns list of 37 available financial keys in the system:
+```json
+{
+  "keys": [
+    "bureau.score",
+    "business.vintage_in_years",
+    "primary_applicant.age",
+    "primary_applicant.monthly_income",
+    "primary_applicant.tags",
+    ...
+  ],
+  "count": 37
+}
+```
 
 ### Generate Rule - Example 1: Loan Approval
 
