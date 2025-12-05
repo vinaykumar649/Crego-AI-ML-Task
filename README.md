@@ -253,33 +253,7 @@ This executes tests for all three hiring manager examples and validates:
 - **Banking**: `banking.abb`, `banking.avg_monthly_turnover`, `banking.total_credits`, `banking.total_debits`, `banking.inward_bounces`, `banking.outward_bounces`
 - **GST & Tax**: `gst.registration_age_months`, `gst.filing_amount`, `gst.turnover`, `gst.turnover_growth_rate`, `gst.monthly_turnover_avg`, `gst.place_of_supply_count`, `gst.missed_returns`, `gst.is_gstin`, `gst.output_tax_liability`, `gst.tax_paid_cash_vs_credit_ratio`, `gst.high_risk_suppliers_count`, `gst.supplier_concentration_ratio`, `gst.customer_concentration_ratio`, `itr.years_filed`, `foir`, `debt_to_income`
 
-## Evaluation Criteria Coverage
 
-### 1. Correct JSON Logic & Key Usage (35 pts)
- Valid JSON Logic syntax with proper operators (and, or, >, >=, <, <=, ==, !=, in)
- All rules use only allowed keys from the 37 financial domain keys
- Variables properly formatted as `{"var": "key_name"}`
- Comprehensive validator ensures compliance (see `src/core/validator.py`)
-
-### 2. Explanations (15 pts)
- Clear, accurate, business-focused explanations
- 1-3 sentences per rule as per LLM system prompt
- Explains conditions and logic flow in plain English
- Domain-specific terminology used appropriately
-
-### 3. Embeddings & Key Mapping (30 pts)
- Sentence-transformers embeddings with cosine similarity
-Smart phrase extraction from user prompts
- Similarity scoring with configurable threshold (default 0.20)
- `key_mappings` output includes user_phrase, mapped_to, similarity
- Confidence score computed from average mapping similarities
-
-### 4. Code Quality & Structure (20 pts)
- Clean separation of concerns across 7 core modules
- Type hints throughout codebase
- Comprehensive error handling and logging
- Production-ready FastAPI implementation
- 43 passing tests validating all functionality
 
 ## Configuration
 
