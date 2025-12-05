@@ -1,0 +1,88 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "json-logic-rule-generator"
+version = "1.0.0"
+description = "Generate JSON Logic rules from natural language prompts with RAG and embeddings"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Proprietary"}
+authors = [
+    {name = "Development Team", email = "dev@example.com"}
+]
+keywords = ["json-logic", "embeddings", "rag", "llm", "natural-language"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+]
+
+dependencies = [
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0.1",
+    "numpy>=1.24.0",
+    "sentence-transformers>=2.2.2",
+    "openai>=1.6.0",
+    "faiss-cpu>=1.7.4",
+    "scikit-learn>=1.3.0",
+    "jsonlogic>=0.1.4",
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.12.0",
+    "flake8>=6.1.0",
+    "mypy>=1.7.0",
+]
+notebooks = [
+    "jupyter>=1.0.0",
+    "notebook>=7.0.0",
+]
+tracking = [
+    "mlflow>=2.10.0",
+    "wandb>=0.16.0",
+]
+
+[project.urls]
+Homepage = "https://example.com"
+Documentation = "https://example.com/docs"
+Repository = "https://github.com/example/repo"
+Issues = "https://github.com/example/repo/issues"
+
+[tool.black]
+line-length = 120
+target-version = ["py310"]
+include = '\.pyi?$'
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+addopts = "-v --tb=short"
+
+[tool.setuptools]
+packages = ["src", "src.api", "src.core", "src.examples"]
+
+[tool.setuptools.package-data]
+"" = ["*.md", "*.yaml", "*.json"]

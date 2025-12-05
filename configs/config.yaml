@@ -1,0 +1,73 @@
+project:
+  name: JSON Logic Rule Generator
+  version: 1.0.0
+  description: Generate JSON Logic rules from natural language prompts with RAG and embeddings
+
+api:
+  host: ${API_HOST:0.0.0.0}
+  port: ${API_PORT:8000}
+  workers: ${API_WORKERS:4}
+  debug: false
+
+openai:
+  api_key: ${OPENAI_API_KEY:}
+  model: ${OPENAI_MODEL:gpt-4-turbo}
+  temperature: ${OPENAI_TEMPERATURE:0.7}
+  max_tokens: 2000
+  timeout: 30
+
+embeddings:
+  provider: ${EMBEDDING_PROVIDER:sentence-transformers}
+  model: ${EMBEDDING_MODEL:all-MiniLM-L6-v2}
+  dimension: 384
+
+vector_store:
+  type: ${VECTOR_STORE_TYPE:faiss}
+  path: ${VECTOR_STORE_PATH:./data/vector_store}
+  rebuild_on_startup: false
+
+rag:
+  enabled: ${RAG_ENABLED:true}
+  top_k: ${RAG_TOP_K:3}
+  policy_docs_path: ./data/policy_docs.md
+  similarity_threshold: 0.5
+
+similarity:
+  threshold: ${SIMILARITY_THRESHOLD:0.75}
+  top_k: ${SIMILARITY_TOP_K:3}
+  method: cosine
+
+logging:
+  level: ${LOG_LEVEL:INFO}
+  format: json
+  path: ./logs
+
+jsonlogic:
+  allowed_operators:
+    - and
+    - or
+    - if
+    - ">"
+    - ">="
+    - "<"
+    - "<="
+    - "=="
+    - "!="
+    - in
+    - "+"
+    - "-"
+    - "*"
+    - "/"
+  max_depth: 10
+  max_size: 5000
+
+validation:
+  enable_strict_mode: true
+  check_key_existence: true
+  allow_custom_vars: false
+
+tracking:
+  mlflow_enabled: false
+  mlflow_uri: ${MLFLOW_TRACKING_URI:http://localhost:5000}
+  wandb_enabled: false
+  wandb_project: ${WANDB_PROJECT:json-logic-generator}

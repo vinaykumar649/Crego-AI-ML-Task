@@ -1,0 +1,226 @@
+{
+  "keys": [
+    {
+      "key": "business.address.pincode",
+      "description": "Business Pincode",
+      "type": "number",
+      "example": 110001
+    },
+    {
+      "key": "business.address.state",
+      "description": "Business State",
+      "type": "string",
+      "example": "MH"
+    },
+    {
+      "key": "business.vintage_in_years",
+      "description": "Business Vintage In Years",
+      "type": "number",
+      "example": 5
+    },
+    {
+      "key": "business.commercial_cibil_score",
+      "description": "Commercial Cibil Score",
+      "type": "number",
+      "example": 750
+    },
+    {
+      "key": "primary_applicant.age",
+      "description": "Primary Applicant Age",
+      "type": "number",
+      "example": 35
+    },
+    {
+      "key": "primary_applicant.monthly_income",
+      "description": "Primary Applicant Monthly Income",
+      "type": "number",
+      "example": 100000
+    },
+    {
+      "key": "primary_applicant.tags",
+      "description": "Primary Applicant Tags",
+      "type": "array",
+      "example": ["veteran", "self_employed"]
+    },
+    {
+      "key": "bureau.score",
+      "description": "Bureau Score",
+      "type": "number",
+      "example": 720
+    },
+    {
+      "key": "bureau.is_ntc",
+      "description": "Is New to Credit",
+      "type": "boolean",
+      "example": false
+    },
+    {
+      "key": "bureau.overdue_amount",
+      "description": "Overdue Amount",
+      "type": "number",
+      "example": 5000
+    },
+    {
+      "key": "bureau.dpd",
+      "description": "Days Past Due",
+      "type": "number",
+      "example": 0
+    },
+    {
+      "key": "bureau.active_accounts",
+      "description": "Active Accounts",
+      "type": "number",
+      "example": 3
+    },
+    {
+      "key": "bureau.enquiries",
+      "description": "Enquiries",
+      "type": "number",
+      "example": 2
+    },
+    {
+      "key": "bureau.suit_filed",
+      "description": "Suit Filed",
+      "type": "boolean",
+      "example": false
+    },
+    {
+      "key": "bureau.wilful_default",
+      "description": "Wilful Default",
+      "type": "boolean",
+      "example": false
+    },
+    {
+      "key": "banking.abb",
+      "description": "Average Bank Balance",
+      "type": "number",
+      "example": 250000
+    },
+    {
+      "key": "banking.avg_monthly_turnover",
+      "description": "Average Monthly Turnover",
+      "type": "number",
+      "example": 500000
+    },
+    {
+      "key": "banking.total_credits",
+      "description": "Total Credits",
+      "type": "number",
+      "example": 5000000
+    },
+    {
+      "key": "banking.total_debits",
+      "description": "Total Debits",
+      "type": "number",
+      "example": 4500000
+    },
+    {
+      "key": "banking.inward_bounces",
+      "description": "Inward Bounces",
+      "type": "number",
+      "example": 0
+    },
+    {
+      "key": "banking.outward_bounces",
+      "description": "Outward Bounces",
+      "type": "number",
+      "example": 0
+    },
+    {
+      "key": "gst.registration_age_months",
+      "description": "GST Registration Age Months",
+      "type": "number",
+      "example": 36
+    },
+    {
+      "key": "gst.place_of_supply_count",
+      "description": "Place Of Supply Count",
+      "type": "number",
+      "example": 5
+    },
+    {
+      "key": "gst.is_gstin",
+      "description": "Is GSTIN Registered",
+      "type": "boolean",
+      "example": true
+    },
+    {
+      "key": "gst.filing_amount",
+      "description": "GST Filing Amount",
+      "type": "number",
+      "example": 1000000
+    },
+    {
+      "key": "gst.missed_returns",
+      "description": "Missed Returns Count",
+      "type": "number",
+      "example": 0
+    },
+    {
+      "key": "gst.monthly_turnover_avg",
+      "description": "Monthly Turnover Average",
+      "type": "number",
+      "example": 500000
+    },
+    {
+      "key": "gst.turnover",
+      "description": "Total Turnover",
+      "type": "number",
+      "example": 6000000
+    },
+    {
+      "key": "gst.turnover_growth_rate",
+      "description": "Turnover Growth Rate",
+      "type": "number",
+      "example": 0.15
+    },
+    {
+      "key": "gst.output_tax_liability",
+      "description": "Output Tax Liability",
+      "type": "number",
+      "example": 100000
+    },
+    {
+      "key": "gst.tax_paid_cash_vs_credit_ratio",
+      "description": "Tax Paid Cash vs Credit Ratio",
+      "type": "number",
+      "example": 0.8
+    },
+    {
+      "key": "gst.high_risk_suppliers_count",
+      "description": "High Risk Suppliers Count",
+      "type": "number",
+      "example": 0
+    },
+    {
+      "key": "gst.supplier_concentration_ratio",
+      "description": "Supplier Concentration Ratio",
+      "type": "number",
+      "example": 0.3
+    },
+    {
+      "key": "gst.customer_concentration_ratio",
+      "description": "Customer Concentration Ratio",
+      "type": "number",
+      "example": 0.4
+    },
+    {
+      "key": "itr.years_filed",
+      "description": "Years ITR Filed",
+      "type": "number",
+      "example": 3
+    },
+    {
+      "key": "foir",
+      "description": "Fixed Obligation Income Ratio",
+      "type": "number",
+      "example": 0.4
+    },
+    {
+      "key": "debt_to_income",
+      "description": "Debt to Income Ratio",
+      "type": "number",
+      "example": 0.35
+    }
+  ]
+}
